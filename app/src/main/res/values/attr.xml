@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Toolbars">
+        <attr name="tb_back" format="boolean"></attr>
+        <attr name="tb_title" format="string"></attr>
+        <attr name="tb_shadow" format="boolean"></attr>
+    </declare-styleable>
+</resources>

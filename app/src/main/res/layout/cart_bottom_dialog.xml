@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lnCart"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:behavior_peekHeight="70dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootCart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="15dp"
+            android:background="@color/white">
+
+<!--            <View-->
+<!--                android:id="@+id/view"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="8dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:background="@drawable/behavior_line_sheet"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+            <ImageView
+                android:id="@+id/ic_bag"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/ic_shop_bag"
+                android:tint="@color/color_primary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:id="@+id/view3"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/behavior_line_sheet"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ic_bag"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/totalCart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center_vertical"
+                android:text="Rp. 0"
+                android:textColor="@color/color_primary"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/checkCart"
+                app:layout_constraintStart_toEndOf="@+id/view3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/checkCart"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:stateListAnimator="@null"
+                android:text="Checkout"
+                android:textSize="10sp"
+                app:backgroundTint="@color/color_primary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/color_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/totalQtyCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/badge_count_cart"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="8sp"
+                app:layout_constraintEnd_toEndOf="@+id/ic_bag"
+                app:layout_constraintTop_toTopOf="@+id/ic_bag" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/behavior_line_sheet" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/badge_scroll_top_cart"
+            android:padding="5dp"
+            android:rotation="90"
+            android:src="@drawable/ic_arrow_back"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

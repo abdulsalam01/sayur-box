@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_secondary">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/lnButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/nested">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/frameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imgDetailProduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="5dp"
+                        app:cardBackgroundColor="@color/white"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:id="@+id/backDetailProduct"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="4dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="4dp"
+                            android:src="@drawable/ic_arrow_back" />
+                    </androidx.cardview.widget.CardView>
+                </FrameLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+                    <TextView
+                        android:id="@+id/nameDetailProduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/informationDetailProduct"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="@+id/nameDetailProduct"
+                        app:layout_constraintStart_toStartOf="@+id/nameDetailProduct"
+                        app:layout_constraintTop_toBottomOf="@+id/nameDetailProduct" />
+
+                    <TextView
+                        android:id="@+id/disconPriceDetailProduct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@+id/informationDetailProduct"
+                        app:layout_constraintTop_toBottomOf="@+id/informationDetailProduct" />
+
+                    <TextView
+                        android:id="@+id/disconDetailProduct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/badge_discon"
+                        android:textColor="#FFFFFF"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/disconPriceDetailProduct"
+                        app:layout_constraintStart_toEndOf="@+id/disconPriceDetailProduct"
+                        app:layout_constraintTop_toTopOf="@+id/disconPriceDetailProduct" />
+
+                    <TextView
+                        android:id="@+id/priceDetailProductl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/color_primary"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@+id/disconPriceDetailProduct"
+                        app:layout_constraintTop_toBottomOf="@+id/disconPriceDetailProduct" />
+
+                    <TextView
+                        android:id="@+id/perDetailProduct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/priceDetailProductl"
+                        app:layout_constraintStart_toEndOf="@+id/priceDetailProductl"
+                        app:layout_constraintTop_toTopOf="@+id/priceDetailProductl" />
+
+                    <TextView
+                        android:id="@+id/promoDetailProduct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:textColor="#FF0000"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/priceDetailProductl"
+                        app:layout_constraintTop_toBottomOf="@+id/priceDetailProductl" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="#FFFFFF"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                    android:nestedScrollingEnabled="false"/>
+
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:id="@+id/rvRelateProduct"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="200dp"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:background="#FFFFFF"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/rvInfo" />-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <include layout="@layout/cart_bottom_dialog" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/lnButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD" />
+
+        <Button
+            android:id="@+id/btnBuy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="8dp"
+            android:stateListAnimator="@null"
+            android:text="BELI"
+            android:textSize="12sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:id="@+id/lnQty"
+            android:padding="5dp"
+            android:visibility="gone">
+            <ImageView
+                android:id="@+id/btnMinProduct"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_min"
+                android:tint="@color/color_primary" />
+
+            <TextView
+                android:id="@+id/qtyProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minWidth="40dp"
+                android:text="0"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"/>
+            <ImageView
+                android:id="@+id/btnPlusProduct"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_plus"
+                android:tint="@color/color_primary"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

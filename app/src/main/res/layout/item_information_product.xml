@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/titleInfo"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iconInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/titleInfo"
+        app:layout_constraintEnd_toEndOf="@+id/titleInfo"
+        app:layout_constraintTop_toTopOf="@+id/titleInfo"
+        android:src="@drawable/ic_arrow_down_list" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleInfo" />
+
+    <TextView
+        android:id="@+id/descInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel massa eros. Vestibulum id mauris id tellus maximus blandit. Nam ac feugiat tortor. Proin consectetur mi convallis orci suscipit, a auctor mi aliquet. Aenean eget ex nec massa vehicula dictum. Vivamus nec vestibulum felis, et cursus ligula. Quisque posuere nisl nec nisl ornare, at tincidunt neque tincidunt. Quisque quis mauris ac sapien dignissim varius."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        android:visibility="gone"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSupplier"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        android:visibility="gone"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
